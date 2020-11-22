@@ -25,7 +25,8 @@ public class RealNumber{
       if (x == 0 || y == 0){
         return (x == y);
       }else{
-        return ((Math.abs(x - y)) / Math.abs((x + y)/2) < 0.00001);
+
+        return ((Math.abs(x - y)*100) / Math.abs((x + y)/2) < 0.00001);
       }
 
     }
@@ -37,7 +38,9 @@ public class RealNumber{
     public RealNumber add(RealNumber other){
       //other can be ANY RealNumber, including a RationalNumber
       //or other subclasses of RealNumber (that aren't written yet)
-      return null;
+      
+      return new RealNumber(this.getValue() + other.getValue());
+
     }
 
   /*
@@ -45,7 +48,7 @@ public class RealNumber{
   *the product of this and the other
   */
     public RealNumber multiply(RealNumber other){
-          return null;
+      return new RealNumber(this.getValue() * other.getValue());
     }
 
   /*
@@ -53,7 +56,7 @@ public class RealNumber{
   *this divided by the other
   */
     public RealNumber divide(RealNumber other){
-          return null;
+      return new RealNumber(this.getValue() / other.getValue());
     }
 
   /*
@@ -61,7 +64,7 @@ public class RealNumber{
   *this minus the other
   */
     public RealNumber subtract(RealNumber other){
-      return null;
+      return new RealNumber(this.getValue() - other.getValue());
     }
 }
 
