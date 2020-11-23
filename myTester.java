@@ -50,6 +50,16 @@ public class myTester {
         System.out.println(a.toString().equals("0/1"));
         System.out.println(b.toString().equals("0/1"));
 
+        System.out.println("Testing RationalNumber OPts");
+
+        a = new RationalNumber(3, 2);
+        b = new RationalNumber(1, 2);
+        
+
+        System.out.println(a.add(b).toString().equals("2/1"));
+        System.out.println(a.subtract(b).toString().equals("1/1"));
+        System.out.println(a.multiply(b).toString().equals("3/4"));
+        System.out.println(a.divide(b).toString().equals("3/1"));
     }
     
 }

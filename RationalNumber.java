@@ -87,6 +87,10 @@ public class RationalNumber extends RealNumber {
     if (numerator == 0){
       denominator = 1;
     }
+    else if(numerator == denominator){
+      numerator = 1;
+      denominator = 1;
+    }
     else{
       int myGcd = gcd(numerator, denominator);
       numerator /= myGcd;
@@ -99,26 +103,27 @@ public class RationalNumber extends RealNumber {
   *Return a new RationalNumber that is the product of this and the other
   */
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator * other.getNumerator(), denominator * other.getDenominator());
   }
 
   /**
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator * other.getDenominator(), denominator * other.getNumerator());
   }
 
   /**
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    
+    return new RationalNumber(numerator * other.getDenominator() + denominator * other.getNumerator(), denominator * other.getDenominator());
   }
   /**
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator * other.getDenominator() - denominator * other.getNumerator(), denominator * other.getDenominator());
   }
 } 
