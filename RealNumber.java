@@ -25,8 +25,7 @@ public class RealNumber{
       if (x == 0 || y == 0){
         return (x == y);
       }else{
-
-        return ((Math.abs(x - y)*100) / Math.abs((x + y)/2) < 0.00001);
+        return ((Math.abs(x - y)*100) / Math.abs((x + y)/2) < 0.001);
       }
 
     }
@@ -56,6 +55,7 @@ public class RealNumber{
   *this divided by the other
   */
     public RealNumber divide(RealNumber other){
+      // System.out.println(this.getValue() / other.getValue());
       return new RealNumber(this.getValue() / other.getValue());
     }
 
