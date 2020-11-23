@@ -25,7 +25,7 @@ public class RealNumber{
       if (x == 0 || y == 0){
         return (x == y);
       }else{
-        return ((Math.abs(x - y)*100) / Math.abs((x + y)/2) < 0.001);
+        return ((Math.abs(x - y)*100) / Math.abs((x + y)/2) <= 0.001);
       }
 
     }
