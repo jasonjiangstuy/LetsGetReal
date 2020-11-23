@@ -42,13 +42,14 @@ public class myTester {
         a = new RationalNumber(6, 4);
         b = new RationalNumber(10, 5);
         System.out.println(a.toString().equals("3/2"));
-        System.out.println(b.toString().equals("2/1"));
+        System.out.println(b.toString().equals("2"));
 
         System.out.println("Testing RationalNumber Special 0 cases");
         a = new RationalNumber(6, 0);
         b = new RationalNumber(0, 6);
-        System.out.println(a.toString().equals("0/1"));
-        System.out.println(b.toString().equals("0/1"));
+        System.out.println(a);
+        System.out.println(a.toString().equals("0"));
+        System.out.println(b.toString().equals("0"));
 
         System.out.println("Testing RationalNumber OPts");
 
@@ -56,10 +57,10 @@ public class myTester {
         b = new RationalNumber(1, 2);
         
 
-        System.out.println(a.add(b).toString().equals("2/1"));
-        System.out.println(a.subtract(b).toString().equals("1/1"));
+        System.out.println(a.add(b).toString().equals("2"));
+        System.out.println(a.subtract(b).toString().equals("1"));
         System.out.println(a.multiply(b).toString().equals("3/4"));
-        System.out.println(a.divide(b).toString().equals("3/1"));
+        System.out.println(a.divide(b).toString().equals("3"));
 
         System.out.println("Testing Real and rational Number OPts");
 // x = 3 y= 4 a = 3/2 b = 1/2
@@ -67,6 +68,9 @@ public class myTester {
         System.out.println(y.subtract(a).getValue()== 2.5);
         System.out.println(x.multiply(b).getValue()==1.5); 
         System.out.println(y.divide(a).getValue()==(8.0/3));
+        // test 5/1
+        x =  new RationalNumber(2, 1);
+        System.out.println(x);
     }
     
 }
