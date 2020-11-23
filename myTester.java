@@ -60,6 +60,13 @@ public class myTester {
         System.out.println(a.subtract(b).toString().equals("1/1"));
         System.out.println(a.multiply(b).toString().equals("3/4"));
         System.out.println(a.divide(b).toString().equals("3/1"));
+
+        System.out.println("Testing Real and rational Number OPts");
+// x = 3 y= 4 a = 3/2 b = 1/2
+        System.out.println(x.add(b).getValue() == 3.5);
+        System.out.println(y.subtract(a).getValue()== 2.5);
+        System.out.println(x.multiply(b).getValue()==1.5); 
+        System.out.println(y.divide(a).getValue()==(8.0/3));
     }
     
 }

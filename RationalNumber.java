@@ -20,7 +20,7 @@ public class RationalNumber extends RealNumber {
   }
 
   public double getValue(){
-    return numerator/denominator;
+    return (double)numerator/denominator;
   }
 
   /**
