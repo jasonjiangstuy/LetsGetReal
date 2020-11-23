@@ -29,6 +29,27 @@ public class myTester {
             // System.out.println(x.divide(y).getValue());
             System.out.println("Subtract: " + (3-4 == x.subtract(y).getValue()));
 
+    System.out.println("Testing RationalNumber");
+
+
+        RationalNumber a = new RationalNumber(3, 4);
+        RationalNumber b = new RationalNumber(4, 5);
+        System.out.println("Testing RationalNumber to string");
+        System.out.println(a.toString().equals("3/4"));
+        System.out.println(b.toString().equals("4/5"));
+
+        System.out.println("Testing RationalNumber Reduce");
+        a = new RationalNumber(6, 4);
+        b = new RationalNumber(10, 5);
+        System.out.println(a.toString().equals("3/2"));
+        System.out.println(b.toString().equals("2/1"));
+
+        System.out.println("Testing RationalNumber Special 0 cases");
+        a = new RationalNumber(6, 0);
+        b = new RationalNumber(0, 6);
+        System.out.println(a.toString().equals("0/1"));
+        System.out.println(b.toString().equals("0/1"));
+
     }
     
 }
